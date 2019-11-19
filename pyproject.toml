@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "genclf"
+version = "0.1.0"
+description = "Gender Classifier ML Package for classifying gender using firstname"
+authors = ["JCharis <jcharistech@gmail.com>"]
+# New Details
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/jcharis/genclf"
+repository = "https://github.com/Jcharis/genclf.git"
+keywords = ["genclf", "gender classifier", "genderizer"]
+classifiers = [
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Documentation",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Machine Learning",
+]
+include = [
+    "LICENSE",
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+scikit-learn = "^0.21.3"
+joblib = "^0.14.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
