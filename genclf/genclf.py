@@ -3,6 +3,8 @@ import warnings
 warnings.filterwarnings('ignore')
 # from sklearn.externals import joblib
 import joblib
+import os
+PACKAGE_DIR = os.path.dirname(__file__) #<-- absolute dir the script is in
 
 class GenderClassifier(object):
 	"""docstring for GenderClassifier"""
@@ -15,10 +17,10 @@ class GenderClassifier(object):
 
 	def predict(self):
 		# Load Vectorizers
-		gender_vectorizer = open("models/gender_vectorizer.pkl","rb")
+		gender_vectorizer = open(os.path.join(PACKAGE_DIR,"models/gender_vectorizer.pkl"),"rb")
 		gender_cv = joblib.load(gender_vectorizer)
 		# Classification
-		gender_nv_model = open("models/gender_nv_model.pkl","rb")
+		gender_nv_model = open(os.path.join(PACKAGE_DIR,"models/gender_nv_model.pkl"),"rb")
 		gender_clf = joblib.load(gender_nv_model)
 
 		# Vectorized Data
@@ -33,10 +35,11 @@ class GenderClassifier(object):
 
 	def load(self,model_type):
 		if model_type == 'nv':
-			gender_nv_model = open("/models/gender_nv_model.pkl","rb")
+
+			gender_nv_model = open(os.path.join(PACKAGE_DIR,"models/gender_nv_model.pkl"),"rb")
 			gender_clf = joblib.load(gender_nv_model)
 		elif model_type == 'logit':
-			gender_logit_model = open("/models/gender_logit_model.pkl","rb")
+			gender_logit_model = open(os.path.join(PACKAGE_DIR,"models/gender_logit_model.pkl"),"rb")
 			gender_clf = joblib.load(gender_logit_model)
 		else:
 			print("Pls Load model [nv:naive bayes,logit:logisticregression")
