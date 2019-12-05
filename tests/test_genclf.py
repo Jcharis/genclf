@@ -19,4 +19,14 @@ def test_genclf_for_female():
 	result = g.predict()
 	assert result == 'female'
 
+def test_genclf_for_is_female():
+	g = GenderClassifier()
+	result = g.is_female('Rose')
+	assert result == True
+
+def test_genclf_for_is_male():
+	g = GenderClassifier()
+	result = g.is_male('Jesus')
+	assert result == True
+
 

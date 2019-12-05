@@ -7,7 +7,12 @@ import os
 PACKAGE_DIR = os.path.dirname(__file__) #<-- absolute dir the script is in
 
 class GenderClassifier(object):
-	"""docstring for GenderClassifier"""
+	""" GenderClassifier -A Gender Class
+	g = GenderClassifier()
+	g.name = 'Your Name'
+	g.predict()
+	
+	"""
 	def __init__(self, name=None):
 		super(GenderClassifier, self).__init__()
 		self.name = name
@@ -50,4 +55,16 @@ class GenderClassifier(object):
 		self.name = new_name
 		result = self.predict()
 		return result
+
+	def is_male(self,new_name):
+		self.name = new_name
+		result = self.predict()
+		return result == 'male'
+
+	def is_female(self,new_name):
+		self.name = new_name
+		result = self.predict()
+		return result == 'female'
+
+		
 

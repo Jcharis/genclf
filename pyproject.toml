@@ -1,28 +1,26 @@
 [tool.poetry]
 name = "genclf"
-version = "0.1.0"
+version = "0.0.1"
 description = "Gender Classifier ML Package for classifying gender using firstname"
 authors = ["JCharis <jcharistech@gmail.com>"]
-# New Details
 license = "MIT"
 readme = "README.md"
-homepage = "https://github.com/jcharis/genclf"
-repository = "https://github.com/Jcharis/genclf.git"
-keywords = ["genclf", "gender classifier", "genderizer"]
-classifiers = [
-    "Operating System :: OS Independent",
-    "Topic :: Software Development :: Documentation",
-    "Topic :: Software Development :: Libraries :: Python Modules",
-    "Topic :: Software Development :: Machine Learning",
-]
-include = [
-    "LICENSE",
-]
+homepage = "https://github.com/Jcharis/genclf"
+repository = "https://github.com/Jcharis/genclf"
+keywords = ["gender classifier", "jcharistech", "genclf", "machine learning"]
+
+classifiers=[
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Operating System :: OS Independent",
+    ]
 
 [tool.poetry.dependencies]
 python = "^3.7"
-scikit-learn = "^0.21.3"
 joblib = "^0.14.0"
+scikit-learn = "^0.22.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^3.0"

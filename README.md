@@ -10,27 +10,40 @@ pip install genclf
 ### Usage
 #### Basic usage
 ```python
->>>from genclf import GenderClassifier
->>>g = GenderClassifier()
->>>g.name = 'Jess'
->>>g.predict()
+>>> from genclf import GenderClassifier
+>>> g = GenderClassifier()
+>>> g.name = 'Jess'
+>>> g.predict()
 ```
 
 #### Loading Different Models
 ```python
->>>from genclf import GenderClassifier
->>>g = GenderClassifier()
->>>g.name = 'Jessica'
->>>g.load('nv')
->>>g.predict()
+>>> from genclf import GenderClassifier
+>>> g = GenderClassifier()
+>>> g.name = 'Jessica'
+>>> g.load('logit')
+>>> g.predict()
 ```
 
 #### Using the Classify Method
 ```python
->>>from genclf import GenderClassifier
->>>g = GenderClassifier()
->>>g.load('nv')
->>>g.classify("David")
+>>> from genclf import GenderClassifier
+>>> g = GenderClassifier()
+>>> g.load('nb')
+>>> g.classify("David")
+```
+
+#### Check Gender
+```python
+>>> from genclf import GenderClassifier
+>>> g = GenderClassifier()
+>>> g.is_male("Mark")
+```
+
+```python
+>>> from genclf import GenderClassifier
+>>> g = GenderClassifier()
+>>> g.is_female("Mary")
 ```
 
 #### Requirements
