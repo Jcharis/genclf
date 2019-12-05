@@ -2,7 +2,7 @@
 name = "genclf"
 version = "0.0.1"
 description = "Gender Classifier ML Package for classifying gender using firstname"
-authors = ["JCharis <jcharistech@gmail.com>"]
+authors = ["Jesse E.Agbe(JCharis) <jcharistech@gmail.com>"]
 license = "MIT"
 readme = "README.md"
 homepage = "https://github.com/Jcharis/genclf"
